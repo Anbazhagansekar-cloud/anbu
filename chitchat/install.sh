@@ -64,13 +64,13 @@ sudo mv /tmp/eksctl /bin
 eksctl version
 
 #Create an IAM Role and attache it to EC2 instance
-aws iam create-role --role-name MyEC2Role --assume-role-policy-document '{"Version": "2012-10-17","Statement": [{"Effect": "Allow","Principal": {"Service": "ec2.amazonaws.com"},"Action": "sts:AssumeRole"}]}'
-aws iam attach-role-policy --role-name MyEC2Role --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
-aws iam attach-role-policy --role-name MyEC2Role --policy-arn arn:aws:iam::aws:policy/AWSCloudFormationFullAccess
-aws iam attach-role-policy --role-name MyEC2Role --policy-arn arn:aws:iam::aws:policy/IAMFullAccess
-aws iam attach-role-policy --role-name MyEC2Role --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
-INSTANCE_ID=$(curl -s http://172.31.33.40/latest/meta-data/instance-id)
-aws ec2 associate-iam-instance-profile --instance-id $INSTANCE_ID --iam-instance-profile Name=MyEC2Role
+#aws iam create-role --role-name MyEC2Role --assume-role-policy-document '{"Version": "2012-10-17","Statement": [{"Effect": "Allow","Principal": {"Service": "ec2.amazonaws.com"},"Action": "sts:AssumeRole"}]}'
+#aws iam attach-role-policy --role-name MyEC2Role --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
+#aws iam attach-role-policy --role-name MyEC2Role --policy-arn arn:aws:iam::aws:policy/AWSCloudFormationFullAccess
+#aws iam attach-role-policy --role-name MyEC2Role --policy-arn arn:aws:iam::aws:policy/IAMFullAccess
+#aws iam attach-role-policy --role-name MyEC2Role --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+#INSTANCE_ID=$(curl -s http://172.31.33.40/latest/meta-data/instance-id)
+#aws ec2 associate-iam-instance-profile --instance-id $INSTANCE_ID --iam-instance-profile Name=MyEC2Role
 
 
 #Setup Kubernetes using eksctl
