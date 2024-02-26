@@ -1,8 +1,8 @@
 pipeline {
-    agent { label 'Jenkins-Agent' }
+    agent any
     tools {
-        jdk 'Java17'
-        maven 'Maven3'
+        jdk 'Java8'
+        maven 'Maven'
     }
     environment {
         APP_NAME = "app-main-pipeline"
@@ -38,7 +38,7 @@ pipeline {
 
         stage("SonarQube Analysis"){
             steps {
-                withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
+                withSonarQubeEnv(credentialsId: 'sonar') { 
                     sh "mvn sonar:sonar"
                 }
             }
