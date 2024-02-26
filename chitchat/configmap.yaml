@@ -3,5 +3,4 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  database_url: "your_database_url"
-  api_key: "your_api_key"
+  JENKINS_API_TOKEN: "11a34c6fbcca61e3bbed5e5531caef7ad1"
