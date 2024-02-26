@@ -80,3 +80,6 @@ eksctl create cluster --name virtualtechbox-cluster \
 --node-type t2.small \
 --nodes 3 \
 
+git config --global user.name "Anbazhagansekar-cloud"
+git config --global user.email "anbazhagansekar1996cloud@gmail.com"
+git clone https://github.com/Anbazhagansekar-cloud/anbu.git
