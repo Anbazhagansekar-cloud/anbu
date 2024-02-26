@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hello-world
-          image: your-docker-hub-username/hello-world:latest
+          image: Anbazhagansekar-cloud/hello-world:latest
           ports:
             - containerPort: 3000
           envFrom:
