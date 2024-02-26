@@ -1,0 +1,23 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "Building microservices..."
+    # Add commands to build your microservices here
+
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+    # Add commands to run tests and code quality checks here
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying to Kubernetes..."
+    - kubectl apply -f deployment.yaml -f service.yaml -f ingress.yaml
+
