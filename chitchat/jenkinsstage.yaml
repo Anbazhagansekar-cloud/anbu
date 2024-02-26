@@ -19,5 +19,5 @@ deploy:
   stage: deploy
   script:
     - echo "Deploying to Kubernetes..."
-    - kubectl apply -f deployment.yaml -f service.yaml -f ingress.yaml
+    - kubectl apply -f deployment.yaml -f service.yaml -f app-config.yaml -f ingress.yaml
 
